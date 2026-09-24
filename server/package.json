@@ -1,0 +1,29 @@
+{
+  "name": "online-teachers-relay",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --watch --experimental-strip-types src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "lint": "eslint src test",
+    "keys": "node scripts/generate-keys.mjs",
+    "test:integration": "node --experimental-strip-types --test test/*.integration.ts"
+  },
+  "dependencies": {
+    "ws": "8.21.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@types/node": "24.0.0",
+    "@types/ws": "8.18.1",
+    "eslint": "9.39.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.2"
+  }
+}
